@@ -81,7 +81,7 @@ function UserMenu({ currentUser }: UserMenuProps) {
 								<MenuItem onClick={() => {}} label='My favorites' />
 								<MenuItem onClick={() => {}} label='My reservations' />
 								<MenuItem onClick={() => {}} label='My properties' />
-								<MenuItem onClick={rentModal.onOpen} label='Airbnb my name' />
+								<MenuItem onClick={rentModal.onOpen} label='Airbnb my home' />
 								<MenuItem onClick={() => signOut()} label='Log out' />
 							</>
 						) : (
