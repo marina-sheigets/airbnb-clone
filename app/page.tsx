@@ -6,6 +6,7 @@ import getListings from './actions/getListings';
 import { Listing } from '@prisma/client';
 import ListingCard from './components/listings/ListingCard';
 import getCurrentUser from './actions/getCurrentUser';
+import { SafeListing } from './types';
 
 export default async function Home() {
 	const listings = await getListings();
@@ -35,7 +36,7 @@ export default async function Home() {
 					2xl:grid-cols-6
 					gap-8
 				`}>
-					{listings.map((listing: Listing) => {
+					{listings.map((listing: SafeListing) => {
 						return (
 							<ListingCard
 								currentUser={currentUser}
