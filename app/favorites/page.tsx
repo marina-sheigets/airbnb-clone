@@ -1,7 +1,7 @@
 import React from 'react';
 import ClientOnlyProvider from '../components/ClientOnly';
 import EmptyState from '../components/EmptyState';
-import getFavoriteListings from '../actions/getfavoriteListings';
+import getFavoriteListings from '../actions/getFavoriteListings';
 import getCurrentUser from '../actions/getCurrentUser';
 import FavoritesClient from './FavoritesClient';
 
@@ -20,7 +20,6 @@ async function ListingPage() {
 	}
 	return (
 		<ClientOnlyProvider>
-			FavoritesClient
 			<FavoritesClient listings={listings} currentUser={currentUser} />
 		</ClientOnlyProvider>
 	);
